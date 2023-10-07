@@ -5,8 +5,10 @@ import com.squareup.moshi.JsonClass
 
 @JsonClass(generateAdapter = true)
 data class WeatherForecastResponse(
-    @Json(name = "request") val request: RequestItem?,
-    @Json(name = "location") val location: LocationItem?,
-    @Json(name = "current") val current: CurrentWeatherItem?,
-    @Json(name = "forecast") val forecast: Map<String, DailyForecastItem>?,
+    @Json(name = "request") val request: RequestResponse?,
+    @Json(name = "location") val location: LocationResponse?,
+    @Json(name = "current") val current: CurrentWeatherResponse?,
+    @Json(name = "success") val success: Boolean?,
+    @Json(name = "error") val error: ErrorResponse?,
+    
 )

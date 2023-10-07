@@ -76,7 +76,7 @@ dependencies {
     implementation(libs.compose.ui.graphics)
     implementation(libs.compose.ui.tooling)
     implementation(libs.compose.material3)
-    // implementation("androidx.compose.material:material")
+    implementation("androidx.compose.material:material")
     implementation(libs.compose.animation)
     implementation(libs.compose.lifecycle.viewmodel)
     implementation(libs.compose.runtime.livedata)

@@ -1,20 +1,50 @@
 package com.gonzalez.blanchard.data.mappers.responses
 
-import com.gonzalez.blanchard.domain.base.models.WeatherItem
+import com.gonzalez.blanchard.domain.base.models.CurrentBO
+import com.gonzalez.blanchard.domain.base.models.LocationBO
+import com.gonzalez.blanchard.domain.base.models.RequestBO
+import com.gonzalez.blanchard.domain.base.models.WeatherBO
 import com.gonzalez.blanchard.models.WeatherApiResponse
 
-fun WeatherApiResponse.toWeatherItem(): WeatherItem {
+fun WeatherApiResponse.toWeatherItem(): WeatherBO {
     val currentWeather = this.current
-    return WeatherItem(
-        temperature = currentWeather?.temperature?.toDouble() ?: 0.0,
-        condition = currentWeather?.weather_descriptions?.firstOrNull() ?: "",
-        iconUrl = currentWeather?.weather_icons?.firstOrNull() ?: "",
-        windSpeed = currentWeather?.wind_speed?.toDouble() ?: 0.0,
-        windDirection = currentWeather?.wind_dir ?: "",
-        humidity = currentWeather?.humidity ?: 0,
-        pressure = currentWeather?.pressure?.toDouble() ?: 0.0,
-        feelsLike = currentWeather?.feelslike?.toDouble() ?: 0.0,
-        uvIndex = currentWeather?.uv_index ?: 0,
-        visibility = currentWeather?.visibility?.toDouble() ?: 0.0,
+    return WeatherBO(
+        success = this.success ?: true,
+        request = this.request?.toRequestBO() ?: RequestBO(
+            type = "",
+            query = "",
+            language = "",
+            unit = "",
+        ), 
+        location = this.location?.toLocationBO() ?: LocationBO(
+            name = "",
+            country = "",
+            region = "",
+            lat = "",
+            lon = "",
+            timezoneId = "",
+            localtime = "",
+            localtimeEpoch = 0,
+            utcOffset = "",
+        ),
+        current = this.current?.toCurrentBO() ?: CurrentBO(
+            observationTime = "",
+            temperature = 0,
+            weatherCode = 0,
+            weatherIcons = listOf(),
+            weatherDescriptions = listOf(),
+            windSpeed = 0,
+            windDegree = 0,
+            windDir = "",
+            pressure = 0,
+            precip = 0.0,
+            humidity = 0,
+            cloudcover = 0,
+            feelslike = 0,
+            uvIndex = 0,
+            visibility = 0,
+            isDay = "",
+        ),
+        error = this.error?.toErrorBO(),
     )
 }

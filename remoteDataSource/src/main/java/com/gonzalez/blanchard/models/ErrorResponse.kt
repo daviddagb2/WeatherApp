@@ -1,10 +1,10 @@
 package com.gonzalez.blanchard.models
 
+import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
 
 @JsonClass(generateAdapter = true)
 data class ErrorResponse(
-    val code: Int,
-    val type: String,
-    val info: String,
+    @Json(name = "success") val success: Boolean?,
+    @Json(name = "error") val error: ErrorDetailResponse?,
 )

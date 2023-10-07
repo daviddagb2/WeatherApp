@@ -4,9 +4,8 @@ import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
 
 @JsonClass(generateAdapter = true)
-data class RequestItem(
+data class ErrorDetailResponse(
+    @Json(name = "code") val code: Int?,
     @Json(name = "type") val type: String?,
-    @Json(name = "query") val query: String?,
-    @Json(name = "language") val language: String?,
-    @Json(name = "unit") val unit: String?,
+    @Json(name = "info") val info: String?,
 )

@@ -1,6 +1,6 @@
 package com.gonzalez.blanchard.domain.base.models
 
-data class WeatherMapItem(
+data class WeatherMapBO(
     val imageUrl: String,
-    val type: String
+    val type: String,
 )

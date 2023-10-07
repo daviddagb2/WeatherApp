@@ -4,6 +4,7 @@ plugins {
     id(libs.plugins.kotlin.android.get().pluginId)
     id(libs.plugins.dagger.hilt.get().pluginId)
     id(libs.plugins.kapt.get().pluginId)
+    id(libs.plugins.ktlint.jlleitschuh.get().pluginId)
 }
 
 android {

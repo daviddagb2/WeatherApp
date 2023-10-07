@@ -5,6 +5,7 @@ plugins {
     id(libs.plugins.dagger.hilt.get().pluginId)
     id(libs.plugins.kapt.get().pluginId)
     id(libs.plugins.androidx.navigation.get().pluginId)
+    id(libs.plugins.ktlint.jlleitschuh.get().pluginId)
 }
 
 android {

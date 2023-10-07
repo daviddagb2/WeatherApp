@@ -94,3 +94,5 @@ android-application = { id = "com.android.application", version.ref = "androidGr
 android-library = { id = "com.android.library", version.ref = "androidGradlePlugin" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 androidx-navigation = { id = "androidx.navigation.safeargs.kotlin" }
+ktlint-jlleitschuh = { id = "org.jlleitschuh.gradle.ktlint" }
+

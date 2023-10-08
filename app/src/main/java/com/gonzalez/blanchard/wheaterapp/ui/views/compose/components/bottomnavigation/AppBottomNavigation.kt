@@ -6,11 +6,11 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.material.BottomNavigation
 import androidx.compose.material.BottomNavigationItem
 import androidx.compose.material.Icon
+import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
@@ -38,7 +38,7 @@ fun AppBottomNavigation(
     )
 
     BottomNavigation(
-        backgroundColor = Color.White,
+        backgroundColor = MaterialTheme.colors.background,
         elevation = 0.dp,
         modifier = Modifier.height(60.dp),
     ) {
@@ -56,8 +56,8 @@ fun AppBottomNavigation(
                 label = {
                     BottonText(item.titleResId)
                 },
-                selectedContentColor = UnselectedColor,
-                unselectedContentColor = SelectedColor,
+                selectedContentColor = SelectedColor,
+                unselectedContentColor = UnselectedColor,
                 alwaysShowLabel = true,
                 selected = currentRoute == item.screenRoute,
                 enabled = true,

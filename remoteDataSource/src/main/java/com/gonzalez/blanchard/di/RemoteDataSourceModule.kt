@@ -1,6 +1,7 @@
 package com.gonzalez.blanchard.di
 
 import com.gonzalez.blanchard.api.WeatherApi
+import com.gonzalez.blanchard.interceptor.AccessTokenInterceptor
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
 import dagger.Module
@@ -18,8 +19,12 @@ class RemoteDataSourceModule {
 
     @Provides
     @Singleton
-    fun provideOkHttpClientBuilder(): OkHttpClient.Builder {
-        return OkHttpClient.Builder()
+    fun provideOkHttpClientBuilder(
+        accessTokenInterceptor: AccessTokenInterceptor,
+    ): OkHttpClient.Builder {
+        val okHttpClientBuilder = OkHttpClient.Builder()
+        okHttpClientBuilder.addInterceptor(accessTokenInterceptor)
+        return okHttpClientBuilder
     }
 
     @Provides

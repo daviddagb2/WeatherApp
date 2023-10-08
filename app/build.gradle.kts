@@ -91,6 +91,7 @@ dependencies {
     implementation(libs.androidx.lifecycle.viewmodel)
     implementation(libs.dagger.hilt)
     implementation(libs.dagger.hilt.core)
+    implementation(libs.dagger.hilt.compose)
     implementation(libs.zxing)
     implementation(libs.security.crypto)
     implementation(libs.coil)
@@ -104,5 +105,6 @@ dependencies {
     debugImplementation("androidx.compose.ui:ui-tooling")
     debugImplementation("androidx.compose.ui:ui-test-manifest")
 
+    kapt("com.google.dagger:hilt-android-compiler:2.44")
     kapt(libs.dagger.compiler)
 }

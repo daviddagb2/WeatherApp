@@ -8,7 +8,7 @@ import javax.inject.Inject
 class WeatherRemoteDataSource @Inject constructor(
     private val weatherApi: WeatherApi,
 ) {
-    suspend fun getCurrentWeather(city: String, language: String = "en", unit: String = "m"): WeatherApiResponse {
-        return weatherApi.getCurrentWeather(city, unit).parseResponse()
+    suspend fun getCurrentWeather(city: String, units: String, language: String): WeatherApiResponse {
+        return weatherApi.getCurrentWeather(city, units).parseResponse()
     }
 }

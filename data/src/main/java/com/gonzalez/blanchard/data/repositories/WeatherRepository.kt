@@ -11,7 +11,7 @@ class WeatherRepository @Inject constructor(
 ) : IWeatherRepository {
 
     override suspend fun getCurrentWeather(city: String, unit: String, language: String): WeatherBO {
-        val weatherApiResponse = weatherRemoteDataSource.getCurrentWeather(city, language, unit)
+        val weatherApiResponse = weatherRemoteDataSource.getCurrentWeather(city, unit, language)
         return weatherApiResponse.toWeatherItem()
     }
 }

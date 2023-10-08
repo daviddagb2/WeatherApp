@@ -6,10 +6,10 @@ import retrofit2.http.GET
 import retrofit2.http.Query
 
 interface WeatherApi {
-    @GET("/api/v1/weather/current")
+    @GET("/current")
     suspend fun getCurrentWeather(
         @Query("query") city: String,
-        @Query("unit") unit: String = "m",
+        @Query("units") units: String,
         // @Query("language") language: String = "en",
     ): Response<WeatherApiResponse>
 }

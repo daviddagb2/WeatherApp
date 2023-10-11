@@ -6,7 +6,6 @@ import androidx.compose.ui.Modifier
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
-import com.gonzalez.blanchard.weatherapp.ui.views.compose.screens.cities.CitiesScreen
 import com.gonzalez.blanchard.weatherapp.ui.views.compose.screens.mainscreen.MainScreen
 import com.gonzalez.blanchard.weatherapp.ui.views.compose.screens.settings.SettingsScreen
 
@@ -26,9 +25,9 @@ fun NavigationGraph(bottomNavController: NavHostController) {
         composable(BottomNavItem.Main.screenRoute) {
             MainScreen()
         }
-        composable(BottomNavItem.Cities.screenRoute) {
+       /* composable(BottomNavItem.Cities.screenRoute) {
             CitiesScreen()
-        }
+        } */
       
         composable(BottomNavItem.Settings.screenRoute) {
             SettingsScreen()

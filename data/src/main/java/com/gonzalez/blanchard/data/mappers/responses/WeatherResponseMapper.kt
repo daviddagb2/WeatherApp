@@ -7,7 +7,7 @@ import com.gonzalez.blanchard.domain.base.models.WeatherBO
 import com.gonzalez.blanchard.models.WeatherApiResponse
 
 fun WeatherApiResponse.toWeatherItem(): WeatherBO {
-    val currentWeather = this.current
+    this.current
     return WeatherBO(
         success = this.success ?: true,
         request = this.request?.toRequestBO() ?: RequestBO(

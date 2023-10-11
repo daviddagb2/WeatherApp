@@ -30,9 +30,8 @@ import com.gonzalez.blanchard.weatherapp.ui.theme.UnselectedColor
 fun AppBottomNavigation(
     bottomNavController: NavController,
 ) {
-    var items: List<BottomNavItem> = mutableListOf<BottomNavItem>(
+    val items: List<BottomNavItem> = mutableListOf<BottomNavItem>(
         BottomNavItem.Main,
-        BottomNavItem.Cities,
         BottomNavItem.Settings,
     )
 

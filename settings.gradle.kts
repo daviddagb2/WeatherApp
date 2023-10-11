@@ -1,3 +1,5 @@
+val MAPBOX_DOWNLOADS_TOKEN: String by settings
+
 pluginManagement {
     repositories {
         google()
@@ -8,6 +10,7 @@ pluginManagement {
 
 dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    
     repositories {
         google()
         mavenCentral()
@@ -15,8 +18,7 @@ dependencyResolutionManagement {
     }
 }
 
-
-rootProject.name = "WheaterApp"
+rootProject.name = "WeatherApp"
 include(":app")
 include(":data")
 include(":localDataSource")

@@ -1,2 +1,2 @@
-# WheaterApp
-Project to display the wheater in your current zone.
+# WeatherApp
+Project to display the weather in your current zone.

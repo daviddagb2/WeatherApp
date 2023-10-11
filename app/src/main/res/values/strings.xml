@@ -1,6 +1,5 @@
 <resources>
-    <string name="app_name">WheaterApp</string>
-
+    <string name="app_name">Weather App</string>
     <string name="main">Principal</string>
     <string name="cities">Ciudades</string>
     <string name="map">Mapa</string>

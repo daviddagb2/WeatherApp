@@ -9,11 +9,11 @@ plugins {
 }
 
 android {
-    namespace = "com.gonzalez.blanchard.WheaTerApp"
+    namespace = "com.gonzalez.blanchard.weatherapp"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.gonzalez.blanchard.WheaTerApp"
+        applicationId = "com.gonzalez.blanchard.WeatherApp"
         minSdk = 24
         targetSdk = 33
         versionCode = 1

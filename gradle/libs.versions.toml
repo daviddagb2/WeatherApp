@@ -38,6 +38,8 @@ crypto_version = "1.1.0-alpha06"
 coil_version= "2.3.0"
 joda_time_version = "2.12.5"
 chuker_version = "3.5.2"
+core_version = "1.9.0"
+gms_location_version = "18.0.0"
 
 [libraries]
 androidx-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "ktx" }
@@ -84,9 +86,10 @@ kotlinx-coroutines-core = { group = "org.jetbrains.kotlinx", name = "kotlinx-cor
 androidx-paging-common = { group = "androidx.paging", name = "paging-common", version.ref = "paging3_version" }
 coil = { group = "io.coil-kt", name = "coil-compose", version.ref = "coil_version" }
 joda-time = { group = "joda-time", name = "joda-time", version.ref = "joda_time_version" }
-
+androidxcore = { group = "androidx.core", name = "core", version.ref = "core_version" }
 chucker = { group = "com.github.chuckerteam.chucker", name = "library", version.ref = "chuker_version" }
 chucker-no-op = { group = "com.github.chuckerteam.chucker", name = "library-no-op", version.ref = "chuker_version" }
+google-gms-location = { group = "com.google.android.gms", name = "play-services-location", version.ref = "gms_location_version" }
 
 
 [plugins]

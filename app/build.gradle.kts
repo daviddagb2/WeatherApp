@@ -96,6 +96,9 @@ dependencies {
     implementation(libs.security.crypto)
     implementation(libs.coil)
     implementation(libs.joda.time)
+    implementation(libs.androidxcore)
+    implementation("com.google.accompanist:accompanist-permissions:0.33.2-alpha")
+    implementation(libs.google.gms.location)
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.test.ext)
